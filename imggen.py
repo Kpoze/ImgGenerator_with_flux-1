@@ -2,11 +2,11 @@ import torch
 import matplotlib.pyplot as plt
 from diffusers import FluxPipeline
 
-pipe = FluxPipeline.from_pretrained("C:\\Users\\RED94\\Desktop\\alternance\GRETA-IA\\Github\\ImgGenerator", torch_dtype=torch.bfloat16)
+pipe = FluxPipeline.from_pretrained("your path", torch_dtype=torch.bfloat16)
 #pipe.enable_model_cpu_offload()
 pipe.enable_sequential_cpu_offload()
 
-prompt = "frightened, Emmanuel Macron runs away crying from an angry crowd"
+prompt = "a watermelon walking on the moon"
 img = pipe(
     prompt=prompt,
     guidance_scale=3.5,
